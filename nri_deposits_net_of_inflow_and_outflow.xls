@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	:: Knowledge Portal ::
+</title>
+    <style type="text/css">
+        body
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Sans' , sans-serif;
+            color: #686868;
+            font-size: 13px;
+        }
+        
+        
+        .GridHeadLeft_Fin
+        {
+            background-color: #dadfe3;
+            background-position: center center;
+            background-repeat: repeat-x;
+            border-left: 1px solid #585858;
+            border-right: 1px solid #585858;
+            border-bottom: 1px solid #585858;
+            color: #000000;
+            font-size: 11px;
+            height: 26px;
+            padding-left: 10px;
+            text-align: left;
+            text-decoration: none;
+        }
+        
+        .GridHeadCenter_Fin
+        {
+            background-color: #dadfe3;
+            background-position: center center;
+            background-repeat: repeat-x;
+            border-right: 1px solid #585858;
+            border-bottom: 1px solid #585858;
+            color: #000000;
+            font-size: 11px;
+            height: 26px;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .GridHeadRight_Fin
+        {
+            background-color: #dadfe3;
+            background-position: center center;
+            background-repeat: repeat-x;
+            border-right: 1px solid #585858;
+            border-bottom: 1px solid #585858;
+            color: #000000;
+            font-size: 11px;
+            height: 26px;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: right;
+            text-decoration: none;
+        }
+        
+        .GridDataRight_Alt
+        {
+            border-bottom: 1px solid #585858;
+            border-right: 1px solid #585858;
+            color: #585858;
+            cursor: default;
+            font-size: 11px;
+            line-height: 20px;
+            padding-right: 10px;
+            text-align: right;
+        }
+        .GridDataLeft_Alt
+        {
+            border-bottom: 1px solid #585858;
+            border-left: 1px solid #585858;
+            border-right: 1px solid #585858;
+            color: #585858;
+            cursor: default;
+            font-size: 11px;
+            line-height: 20px;
+            padding-right: 10px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .GridDataCenter_Alt
+        {
+            border-bottom: 1px solid #585858;
+            border-style: none;
+            color: #585858;
+            cursor: default;
+            font-size: 11px;
+            line-height: 20px;
+            padding-right: 10px;
+            text-align: center;
+        }
+        
+        .GridDataRight
+        {
+            border-bottom: 1px solid #585858;
+            border-right: 1px solid #585858;
+            color: #323131;
+            cursor: default;
+            font-size: 11px;
+            font-weight: normal;
+            padding-right: 10px;
+            text-align: right;
+            line-height: 32px;
+        }
+        .GridDataCenter
+        {
+            border-bottom: 1px solid #585858;
+            color: #323131;
+            cursor: default;
+            font-size: 11px;
+            font-weight: normal;
+            padding-right: 10px;
+            text-align: center;
+            line-height: 32px;
+        }
+        .GridDataLeft
+        {
+            border-right: 1px solid #585858;
+            border-bottom: 1px solid #585858;
+            border-left: 1px solid #585858;
+            color: #323131;
+            cursor: default;
+            font-size: 11px;
+            font-weight: normal;
+            padding-left: 10px;
+            text-align: left;
+            line-height: 32px;
+        }
+        
+        .DropDown
+        {
+            background: none repeat scroll 0 0 #F7FBFD;
+            border: 1px solid #D2D8DE;
+            line-height: 20px;
+            width: 85px;
+        }
+        .btnGo_Css
+        {
+            background-color: #009EF3;
+            border: medium none;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Arial,Verdana;
+            font-size: 12px;
+            height: 20px;
+            width: 26px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .NewsTime
+        {
+            border-bottom: 1px solid #585858;
+            color: #17a7f4;
+            font-weight: normal;
+            line-height: 22px;
+        }
+        .NewsHeading
+        {
+            border-bottom: 1px solid #585858;
+            color: #737373;
+            font-weight: normal;
+            line-height: 22px;
+            padding-left: 7px;
+            text-align: left;
+        }
+        .HomeNewsHead
+        {
+            color: #0089D2;
+            font-weight: bold;
+            line-height: 18px;
+            padding-left: 7px;
+            text-align: left;
+        }
+        .HomeNewsDate
+        {
+            color: #0089D2;
+            font-weight: bold;
+            line-height: 25px;
+            padding-left: 7px;
+            text-align: left;
+            text-decoration: none;
+        }
+        a.NewsHeading, a.NewsHeading:link, a.NewsHeading:visited, a.NewsHeading:active, a.NewsHeading:focus
+        {
+            color: #737373;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        .Newsdate
+        {
+            border-bottom: 1px solid #585858;
+            color: #066192;
+            font-weight: normal;
+            line-height: 22px;
+            padding-left: 7px;
+            text-align: left;
+            text-decoration: none;
+        }
+        .NoData
+        {
+            color: #FF0000;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .NewsDetails
+        {
+            color: #4e4f50;
+            font-weight: normal;
+            padding-left: 5px;
+            line-height: 22px;
+            text-align: justify;
+            text-decoration: none;
+        }
+        .NewsHeadingDate
+        {
+            color: #0089d2;
+            font-weight: bold;
+            line-height: 18px;
+            padding-left: 2px;
+            text-align: left;
+        }
+        .Prev, .Nxt
+        {
+            background: none repeat scroll 0 0 #8596a5;
+            cursor: default;
+            float: left;
+            height: 15px;
+            margin-right: 1px;
+            position: relative;
+            width: 15px;
+        }
+        .Prev span, .Nxt span
+        {
+            display: block;
+            height: 0;
+            position: absolute;
+            top: 2px;
+            width: 0;
+        }
+        .Prev span
+        {
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid #FFFFFF;
+            border-top: 5px solid transparent;
+            left: 5px;
+        }
+        .Nxt span
+        {
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid #FFFFFF;
+            border-top: 5px solid transparent;
+            right: 4px;
+        }
+        .Prev:hover, .Nxt:hover, .Prev.PNActive, .Nxt.PNActive
+        {
+            background: none repeat scroll 0 0 #0a81c0;
+        }
+        .Green_Page
+        {
+            color: #0a81c0;
+        }
+        .HeadBox
+        {
+            background: none repeat scroll 0 0 #009EF3;
+            color: #FFFFFF;
+            font-weight: normal;
+            margin-bottom: 3px;
+            padding: 6px 0 6px 12px;
+        }
+        .ContentBox
+        {
+            background-color: #FFFFFF;
+            border: 1px solid #D4D4D4;
+            line-height: 22px;
+            padding: 10px;
+        }
+        .NewsContentBox
+        {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #D4D4D4;
+            border-left: 1px solid #D4D4D4;
+            border-right: 1px solid #D4D4D4;
+            line-height: 22px;
+            padding: 10px;
+        }
+        .MoreNews
+        {
+            color: #066192;
+            font-size: 12px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        a.MoreNews:link, a.MoreNews:visited, a.MoreNews:active, a.MoreNews:focus, a.MoreNews:hover
+        {
+            color: #066192;
+            cursor: pointer;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .CursorHand
+        {
+            cursor: pointer;
+        }
+        .CursorMove
+        {
+            cursor: move;
+        }
+        .HLinkcontainer ul
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 0 0 5px;
+        }
+        .HLinkcontainer ul li
+        {
+            line-height: 22px;
+            list-style-type: none;
+        }
+        .HLinkcontainer ul li a:link, .HLinkcontainer ul li a:visited, .HLinkcontainer ul li a:active
+        {
+            color: #8C9197;
+            text-decoration: none;
+        }
+        .HLinkcontainer ul li a:hover
+        {
+            color: #066192;
+            text-decoration: none;
+        }
+        
+        
+        .Css_BreadCrumb
+        {
+            color: #686868;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .Css_BreadCrumb a:link, .Css_BreadCrumb a:visited, .Css_BreadCrumb a:active
+        {
+            color: #686868;
+            text-decoration: none;
+        }
+        
+        input[type="radio"]
+        {
+            background: none;
+            border: none;
+            width: 20px;
+        }
+    </style>
+</head>
+<body style="background-image: none">
+    <form method="post" action="./ExportToExcel.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Mz1yU4axKsaKEqIS9uPD4kBzxOqr5UzMy2RhvoQdl9Rb0GgtwTsWmJNRFOw5poxU2hQtoIIX8Fdkn4tnWNv9O2ZWW4cKAu90nBOxICTFu1g=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C4A7F4AE" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+    <div>
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td style="font-weight: bold; font-size: 16px">
+                    NRI Deposits Net of Inflow and Outflow&nbsp;(200904&nbsp;-&nbsp;202602)
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #585858;">
+                    <div  id='Fin_Freeze' style='overflow:auto;width:100%;border-left:0 px gray solid;border-bottom:0 px gray solid;padding:0px;margin:0 px;'><table CellSpacing='1' cellpadding='0' Width='100%'><tr><td colspan=5 class='GridHeadCenter_Fin'></td></tr><tr><td class=GridHeadRight_Fin>Month End</td><td class=GridHeadRight_Fin>Foreign Currency Non-Resident (Banks)</td><td class=GridHeadRight_Fin>Non-Resident (External) Rupee Accounts</td><td class=GridHeadRight_Fin>Non-Resident Ordinary Rupee Account</td><td class=GridHeadRight_Fin>Total</td></tr><tr><td class=GridDataRight_Alt>200904</td><td class=GridDataRight>173.00</td><td class=GridDataRight_Alt>67.00</td><td class=GridDataRight>229.00</td><td class=GridDataRight_Alt>469.00</td></tr><tr><td class=GridDataRight_Alt>200905</td><td class=GridDataRight>633.00</td><td class=GridDataRight_Alt>128.00</td><td class=GridDataRight>257.00</td><td class=GridDataRight_Alt>1018.00</td></tr><tr><td class=GridDataRight_Alt>200906</td><td class=GridDataRight>-3.00</td><td class=GridDataRight_Alt>187.00</td><td class=GridDataRight>146.00</td><td class=GridDataRight_Alt>330.00</td></tr><tr><td class=GridDataRight_Alt>200907</td><td class=GridDataRight>142.00</td><td class=GridDataRight_Alt>234.00</td><td class=GridDataRight>316.00</td><td class=GridDataRight_Alt>692.00</td></tr><tr><td class=GridDataRight_Alt>200908</td><td class=GridDataRight>-103.00</td><td class=GridDataRight_Alt>-68.00</td><td class=GridDataRight>120.00</td><td class=GridDataRight_Alt>-51.00</td></tr><tr><td class=GridDataRight_Alt>200909</td><td class=GridDataRight>135.00</td><td class=GridDataRight_Alt>38.00</td><td class=GridDataRight>233.00</td><td class=GridDataRight_Alt>406.00</td></tr><tr><td class=GridDataRight_Alt>200910</td><td class=GridDataRight>437.00</td><td class=GridDataRight_Alt>-270.00</td><td class=GridDataRight>166.00</td><td class=GridDataRight_Alt>333.00</td></tr><tr><td class=GridDataRight_Alt>200911</td><td class=GridDataRight>73.00</td><td class=GridDataRight_Alt>-31.00</td><td class=GridDataRight>207.00</td><td class=GridDataRight_Alt>249.00</td></tr><tr><td class=GridDataRight_Alt>200912</td><td class=GridDataRight>-33.00</td><td class=GridDataRight_Alt>44.00</td><td class=GridDataRight>16.00</td><td class=GridDataRight_Alt>27.00</td></tr><tr><td class=GridDataRight_Alt>201001</td><td class=GridDataRight>-131.00</td><td class=GridDataRight_Alt>-286.00</td><td class=GridDataRight>104.00</td><td class=GridDataRight_Alt>-313.00</td></tr><tr><td class=GridDataRight_Alt>201002</td><td class=GridDataRight>-176.00</td><td class=GridDataRight_Alt>-11.00</td><td class=GridDataRight>68.00</td><td class=GridDataRight_Alt>-119.00</td></tr><tr><td class=GridDataRight_Alt>201003</td><td class=GridDataRight>-100.00</td><td class=GridDataRight_Alt>-103.00</td><td class=GridDataRight>84.00</td><td class=GridDataRight_Alt>-119.00</td></tr><tr><td class=GridDataRight_Alt>201004</td><td class=GridDataRight>207.00</td><td class=GridDataRight_Alt>-85.00</td><td class=GridDataRight>197.00</td><td class=GridDataRight_Alt>319.00</td></tr><tr><td class=GridDataRight_Alt>201005</td><td class=GridDataRight>-307.00</td><td class=GridDataRight_Alt>558.00</td><td class=GridDataRight>272.00</td><td class=GridDataRight_Alt>523.00</td></tr><tr><td class=GridDataRight_Alt>201006</td><td class=GridDataRight>210.00</td><td class=GridDataRight_Alt>39.00</td><td class=GridDataRight>29.00</td><td class=GridDataRight_Alt>278.00</td></tr><tr><td class=GridDataRight_Alt>201007</td><td class=GridDataRight>329.00</td><td class=GridDataRight_Alt>468.00</td><td class=GridDataRight>139.00</td><td class=GridDataRight_Alt>936.00</td></tr><tr><td class=GridDataRight_Alt>201008</td><td class=GridDataRight>-33.00</td><td class=GridDataRight_Alt>-234.00</td><td class=GridDataRight>138.00</td><td class=GridDataRight_Alt>-129.00</td></tr><tr><td class=GridDataRight_Alt>201009</td><td class=GridDataRight>347.00</td><td class=GridDataRight_Alt>-300.00</td><td class=GridDataRight>189.00</td><td class=GridDataRight_Alt>236.00</td></tr><tr><td class=GridDataRight_Alt>201010</td><td class=GridDataRight>316.00</td><td class=GridDataRight_Alt>-381.00</td><td class=GridDataRight>322.00</td><td class=GridDataRight_Alt>257.00</td></tr><tr><td class=GridDataRight_Alt>201011</td><td class=GridDataRight>-256.00</td><td class=GridDataRight_Alt>41.00</td><td class=GridDataRight>41.00</td><td class=GridDataRight_Alt>-174.00</td></tr><tr><td class=GridDataRight_Alt>201012</td><td class=GridDataRight>29.00</td><td class=GridDataRight_Alt>-120.00</td><td class=GridDataRight>194.00</td><td class=GridDataRight_Alt>103.00</td></tr><tr><td class=GridDataRight_Alt>201101</td><td class=GridDataRight>156.00</td><td class=GridDataRight_Alt>-105.00</td><td class=GridDataRight>223.00</td><td class=GridDataRight_Alt>274.00</td></tr><tr><td class=GridDataRight_Alt>201102</td><td class=GridDataRight>139.00</td><td class=GridDataRight_Alt>-162.00</td><td class=GridDataRight>188.00</td><td class=GridDataRight_Alt>165.00</td></tr><tr><td class=GridDataRight_Alt>201103</td><td class=GridDataRight>202.00</td><td class=GridDataRight_Alt>1.00</td><td class=GridDataRight>248.00</td><td class=GridDataRight_Alt>451.00</td></tr><tr><td class=GridDataRight_Alt>201104</td><td class=GridDataRight>334.00</td><td class=GridDataRight_Alt>-277.00</td><td class=GridDataRight>350.00</td><td class=GridDataRight_Alt>407.00</td></tr><tr><td class=GridDataRight_Alt>201105</td><td class=GridDataRight>-89.00</td><td class=GridDataRight_Alt>144.00</td><td class=GridDataRight>202.00</td><td class=GridDataRight_Alt>257.00</td></tr><tr><td class=GridDataRight_Alt>201106</td><td class=GridDataRight>300.00</td><td class=GridDataRight_Alt>-100.00</td><td class=GridDataRight>289.00</td><td class=GridDataRight_Alt>489.00</td></tr><tr><td class=GridDataRight_Alt>201107</td><td class=GridDataRight>308.00</td><td class=GridDataRight_Alt>-408.00</td><td class=GridDataRight>193.00</td><td class=GridDataRight_Alt>93.00</td></tr><tr><td class=GridDataRight_Alt>201108</td><td class=GridDataRight>-200.00</td><td class=GridDataRight_Alt>742.00</td><td class=GridDataRight>498.00</td><td class=GridDataRight_Alt>1040.00</td></tr><tr><td class=GridDataRight_Alt>201109</td><td class=GridDataRight>-426.00</td><td class=GridDataRight_Alt>1187.00</td><td class=GridDataRight>893.00</td><td class=GridDataRight_Alt>1654.00</td></tr><tr><td class=GridDataRight_Alt>201110</td><td class=GridDataRight>128.00</td><td class=GridDataRight_Alt>631.00</td><td class=GridDataRight>178.00</td><td class=GridDataRight_Alt>937.00</td></tr><tr><td class=GridDataRight_Alt>201111</td><td class=GridDataRight>-378.00</td><td class=GridDataRight_Alt>898.00</td><td class=GridDataRight>997.00</td><td class=GridDataRight_Alt>1517.00</td></tr><tr><td class=GridDataRight_Alt>201112</td><td class=GridDataRight>-199.00</td><td class=GridDataRight_Alt>718.00</td><td class=GridDataRight>350.00</td><td class=GridDataRight_Alt>869.00</td></tr><tr><td class=GridDataRight_Alt>201201</td><td class=GridDataRight>165.45</td><td class=GridDataRight_Alt>1637.18</td><td class=GridDataRight>-8.67</td><td class=GridDataRight_Alt>1793.96</td></tr><tr><td class=GridDataRight_Alt>201202</td><td class=GridDataRight>9.00</td><td class=GridDataRight_Alt>682.00</td><td class=GridDataRight>-15.00</td><td class=GridDataRight_Alt>676.00</td></tr><tr><td class=GridDataRight_Alt>201203</td><td class=GridDataRight>-581.73</td><td class=GridDataRight_Alt>2683.05</td><td class=GridDataRight>86.64</td><td class=GridDataRight_Alt>2187.96</td></tr><tr><td class=GridDataRight_Alt>201204</td><td class=GridDataRight>-229.05</td><td class=GridDataRight_Alt>2124.82</td><td class=GridDataRight>101.70</td><td class=GridDataRight_Alt>1997.47</td></tr><tr><td class=GridDataRight_Alt>201205</td><td class=GridDataRight>-565.36</td><td class=GridDataRight_Alt>3442.82</td><td class=GridDataRight>-59.71</td><td class=GridDataRight_Alt>2817.75</td></tr><tr><td class=GridDataRight_Alt>201206</td><td class=GridDataRight>98.58</td><td class=GridDataRight_Alt>1868.47</td><td class=GridDataRight>-229.66</td><td class=GridDataRight_Alt>1737.39</td></tr><tr><td class=GridDataRight_Alt>201207</td><td class=GridDataRight>71.08</td><td class=GridDataRight_Alt>1012.22</td><td class=GridDataRight>-229.19</td><td class=GridDataRight_Alt>854.11</td></tr><tr><td class=GridDataRight_Alt>201208</td><td class=GridDataRight>167.40</td><td class=GridDataRight_Alt>1118.63</td><td class=GridDataRight>-384.70</td><td class=GridDataRight_Alt>901.33</td></tr><tr><td class=GridDataRight_Alt>201209</td><td class=GridDataRight>454.18</td><td class=GridDataRight_Alt>903.21</td><td class=GridDataRight>-267.00</td><td class=GridDataRight_Alt>1090.39</td></tr><tr><td class=GridDataRight_Alt>201210</td><td class=GridDataRight>-134.98</td><td class=GridDataRight_Alt>1211.34</td><td class=GridDataRight>-265.28</td><td class=GridDataRight_Alt>811.09</td></tr><tr><td class=GridDataRight_Alt>201211</td><td class=GridDataRight>25.41</td><td class=GridDataRight_Alt>1197.90</td><td class=GridDataRight>-105.34</td><td class=GridDataRight_Alt>1117.98</td></tr><tr><td class=GridDataRight_Alt>201212</td><td class=GridDataRight>-47.89</td><td class=GridDataRight_Alt>916.03</td><td class=GridDataRight>-145.96</td><td class=GridDataRight_Alt>722.18</td></tr><tr><td class=GridDataRight_Alt>201301</td><td class=GridDataRight>32.84</td><td class=GridDataRight_Alt>577.84</td><td class=GridDataRight>-119.25</td><td class=GridDataRight_Alt>491.43</td></tr><tr><td class=GridDataRight_Alt>201302</td><td class=GridDataRight>-32.02</td><td class=GridDataRight_Alt>766.31</td><td class=GridDataRight>-15.74</td><td class=GridDataRight_Alt>718.55</td></tr><tr><td class=GridDataRight_Alt>201303</td><td class=GridDataRight>380.01</td><td class=GridDataRight_Alt>1259.30</td><td class=GridDataRight>-55.16</td><td class=GridDataRight_Alt>1584.15</td></tr><tr><td class=GridDataRight_Alt>201304</td><td class=GridDataRight>409.97</td><td class=GridDataRight_Alt>1075.75</td><td class=GridDataRight>-96.42</td><td class=GridDataRight_Alt>1389.30</td></tr><tr><td class=GridDataRight_Alt>201305</td><td class=GridDataRight>-203.26</td><td class=GridDataRight_Alt>1862.13</td><td class=GridDataRight>-17.60</td><td class=GridDataRight_Alt>1641.27</td></tr><tr><td class=GridDataRight_Alt>201306</td><td class=GridDataRight>-308.12</td><td class=GridDataRight_Alt>2706.39</td><td class=GridDataRight>113.29</td><td class=GridDataRight_Alt>2511.56</td></tr><tr><td class=GridDataRight_Alt>201307</td><td class=GridDataRight>321.56</td><td class=GridDataRight_Alt>866.78</td><td class=GridDataRight>-14.10</td><td class=GridDataRight_Alt>1174.24</td></tr><tr><td class=GridDataRight_Alt>201308</td><td class=GridDataRight>-288.88</td><td class=GridDataRight_Alt>1829.32</td><td class=GridDataRight>22.90</td><td class=GridDataRight_Alt>1563.34</td></tr><tr><td class=GridDataRight_Alt>201309</td><td class=GridDataRight>4104.12</td><td class=GridDataRight_Alt>1091.47</td><td class=GridDataRight>224.43</td><td class=GridDataRight_Alt>5420.02</td></tr><tr><td class=GridDataRight_Alt>201310</td><td class=GridDataRight>5513.87</td><td class=GridDataRight_Alt>-73.65</td><td class=GridDataRight>-157.04</td><td class=GridDataRight_Alt>5283.18</td></tr><tr><td class=GridDataRight_Alt>201311</td><td class=GridDataRight>14895.77</td><td class=GridDataRight_Alt>234.91</td><td class=GridDataRight>13.51</td><td class=GridDataRight_Alt>15144.19</td></tr><tr><td class=GridDataRight_Alt>201312</td><td class=GridDataRight>785.77</td><td class=GridDataRight_Alt>282.36</td><td class=GridDataRight>-47.74</td><td class=GridDataRight_Alt>1020.39</td></tr><tr><td class=GridDataRight_Alt>201401</td><td class=GridDataRight>265.81</td><td class=GridDataRight_Alt>799.20</td><td class=GridDataRight>120.31</td><td class=GridDataRight_Alt>1185.32</td></tr><tr><td class=GridDataRight_Alt>201402</td><td class=GridDataRight>278.52</td><td class=GridDataRight_Alt>199.10</td><td class=GridDataRight>-43.74</td><td class=GridDataRight_Alt>433.88</td></tr><tr><td class=GridDataRight_Alt>201403</td><td class=GridDataRight>859.39</td><td class=GridDataRight_Alt>594.46</td><td class=GridDataRight>185.55</td><td class=GridDataRight_Alt>1639.40</td></tr><tr><td class=GridDataRight_Alt>201404</td><td class=GridDataRight>472.26</td><td class=GridDataRight_Alt>991.90</td><td class=GridDataRight>-65.13</td><td class=GridDataRight_Alt>1399.03</td></tr><tr><td class=GridDataRight_Alt>201405</td><td class=GridDataRight>283.38</td><td class=GridDataRight_Alt>800.39</td><td class=GridDataRight>24.27</td><td class=GridDataRight_Alt>1108.04</td></tr><tr><td class=GridDataRight_Alt>201406</td><td class=GridDataRight>11.48</td><td class=GridDataRight_Alt>-20.92</td><td class=GridDataRight>-88.22</td><td class=GridDataRight_Alt>-97.66</td></tr><tr><td class=GridDataRight_Alt>201407</td><td class=GridDataRight>541.40</td><td class=GridDataRight_Alt>1595.93</td><td class=GridDataRight>163.30</td><td class=GridDataRight_Alt>2300.63</td></tr><tr><td class=GridDataRight_Alt>201408</td><td class=GridDataRight>277.54</td><td class=GridDataRight_Alt>2086.13</td><td class=GridDataRight>143.15</td><td class=GridDataRight_Alt>2506.82</td></tr><tr><td class=GridDataRight_Alt>201409</td><td class=GridDataRight>-536.86</td><td class=GridDataRight_Alt>-249.71</td><td class=GridDataRight>42.86</td><td class=GridDataRight_Alt>-743.71</td></tr><tr><td class=GridDataRight_Alt>201410</td><td class=GridDataRight>-172.21</td><td class=GridDataRight_Alt>1241.63</td><td class=GridDataRight>93.18</td><td class=GridDataRight_Alt>1162.60</td></tr><tr><td class=GridDataRight_Alt>201411</td><td class=GridDataRight>-437.29</td><td class=GridDataRight_Alt>790.08</td><td class=GridDataRight>182.82</td><td class=GridDataRight_Alt>535.61</td></tr><tr><td class=GridDataRight_Alt>201412</td><td class=GridDataRight>159.54</td><td class=GridDataRight_Alt>1526.38</td><td class=GridDataRight>199.00</td><td class=GridDataRight_Alt>1884.92</td></tr><tr><td class=GridDataRight_Alt>201501</td><td class=GridDataRight>264.88</td><td class=GridDataRight_Alt>1103.20</td><td class=GridDataRight>89.38</td><td class=GridDataRight_Alt>1457.46</td></tr><tr><td class=GridDataRight_Alt>201502</td><td class=GridDataRight>65.81</td><td class=GridDataRight_Alt>834.80</td><td class=GridDataRight>8.88</td><td class=GridDataRight_Alt>909.49</td></tr><tr><td class=GridDataRight_Alt>201503</td><td class=GridDataRight>71.05</td><td class=GridDataRight_Alt>1500.08</td><td class=GridDataRight>62.22</td><td class=GridDataRight_Alt>1633.35</td></tr><tr><td class=GridDataRight_Alt>201504</td><td class=GridDataRight>109.27</td><td class=GridDataRight_Alt>2199.68</td><td class=GridDataRight>97.28</td><td class=GridDataRight_Alt>2406.23</td></tr><tr><td class=GridDataRight_Alt>201505</td><td class=GridDataRight>1215.54</td><td class=GridDataRight_Alt>999.57</td><td class=GridDataRight>30.75</td><td class=GridDataRight_Alt>2245.86</td></tr><tr><td class=GridDataRight_Alt>201506</td><td class=GridDataRight>47.28</td><td class=GridDataRight_Alt>1081.00</td><td class=GridDataRight>105.80</td><td class=GridDataRight_Alt>1234.08</td></tr><tr><td class=GridDataRight_Alt>201507</td><td class=GridDataRight>34.78</td><td class=GridDataRight_Alt>1047.50</td><td class=GridDataRight>59.31</td><td class=GridDataRight_Alt>1141.59</td></tr><tr><td class=GridDataRight_Alt>201508</td><td class=GridDataRight>-73.93</td><td class=GridDataRight_Alt>1233.18</td><td class=GridDataRight>99.90</td><td class=GridDataRight_Alt>1259.15</td></tr><tr><td class=GridDataRight_Alt>201509</td><td class=GridDataRight>426.00</td><td class=GridDataRight_Alt>1259.01</td><td class=GridDataRight>141.70</td><td class=GridDataRight_Alt>1826.71</td></tr><tr><td class=GridDataRight_Alt>201510</td><td class=GridDataRight>180.24</td><td class=GridDataRight_Alt>37.73</td><td class=GridDataRight>17.52</td><td class=GridDataRight_Alt>235.49</td></tr><tr><td class=GridDataRight_Alt>201511</td><td class=GridDataRight>-113.00</td><td class=GridDataRight_Alt>590.05</td><td class=GridDataRight>61.04</td><td class=GridDataRight_Alt>538.09</td></tr><tr><td class=GridDataRight_Alt>201512</td><td class=GridDataRight>46.27</td><td class=GridDataRight_Alt>626.72</td><td class=GridDataRight>103.47</td><td class=GridDataRight_Alt>776.46</td></tr><tr><td class=GridDataRight_Alt>201601</td><td class=GridDataRight>-110.21</td><td class=GridDataRight_Alt>1152.01</td><td class=GridDataRight>18.14</td><td class=GridDataRight_Alt>1059.94</td></tr><tr><td class=GridDataRight_Alt>201602</td><td class=GridDataRight>157.33</td><td class=GridDataRight_Alt>785.07</td><td class=GridDataRight>48.46</td><td class=GridDataRight_Alt>990.86</td></tr><tr><td class=GridDataRight_Alt>201603</td><td class=GridDataRight>572.61</td><td class=GridDataRight_Alt>1447.02</td><td class=GridDataRight>317.44</td><td class=GridDataRight_Alt>2337.07</td></tr><tr><td class=GridDataRight_Alt>201604</td><td class=GridDataRight>152.06</td><td class=GridDataRight_Alt>278.91</td><td class=GridDataRight>-53.70</td><td class=GridDataRight_Alt>377.27</td></tr><tr><td class=GridDataRight_Alt>201605</td><td class=GridDataRight>-173.36</td><td class=GridDataRight_Alt>458.20</td><td class=GridDataRight>47.11</td><td class=GridDataRight_Alt>331.95</td></tr><tr><td class=GridDataRight_Alt>201606</td><td class=GridDataRight>-219.43</td><td class=GridDataRight_Alt>809.77</td><td class=GridDataRight>77.89</td><td class=GridDataRight_Alt>668.23</td></tr><tr><td class=GridDataRight_Alt>201607</td><td class=GridDataRight>-126.04</td><td class=GridDataRight_Alt>1426.24</td><td class=GridDataRight>169.46</td><td class=GridDataRight_Alt>1469.66</td></tr><tr><td class=GridDataRight_Alt>201608</td><td class=GridDataRight>509.66</td><td class=GridDataRight_Alt>337.31</td><td class=GridDataRight>146.76</td><td class=GridDataRight_Alt>993.73</td></tr><tr><td class=GridDataRight_Alt>201609</td><td class=GridDataRight>-1341.80</td><td class=GridDataRight_Alt>745.34</td><td class=GridDataRight>220.80</td><td class=GridDataRight_Alt>-375.66</td></tr><tr><td class=GridDataRight_Alt>201610</td><td class=GridDataRight>-5945.18</td><td class=GridDataRight_Alt>506.90</td><td class=GridDataRight>74.68</td><td class=GridDataRight_Alt>-5363.60</td></tr><tr><td class=GridDataRight_Alt>201611</td><td class=GridDataRight>-11412.27</td><td class=GridDataRight_Alt>1481.80</td><td class=GridDataRight>630.63</td><td class=GridDataRight_Alt>-9299.84</td></tr><tr><td class=GridDataRight_Alt>201612</td><td class=GridDataRight>-5900.10</td><td class=GridDataRight_Alt>1779.21</td><td class=GridDataRight>254.63</td><td class=GridDataRight_Alt>-3866.26</td></tr><tr><td class=GridDataRight_Alt>201701</td><td class=GridDataRight>-218.29</td><td class=GridDataRight_Alt>628.04</td><td class=GridDataRight>171.78</td><td class=GridDataRight_Alt>581.53</td></tr><tr><td class=GridDataRight_Alt>201702</td><td class=GridDataRight>-68.36</td><td class=GridDataRight_Alt>-269.14</td><td class=GridDataRight>-15.98</td><td class=GridDataRight_Alt>-353.48</td></tr><tr><td class=GridDataRight_Alt>201703</td><td class=GridDataRight>429.09</td><td class=GridDataRight_Alt>1568.65</td><td class=GridDataRight>471.77</td><td class=GridDataRight_Alt>2469.51</td></tr><tr><td class=GridDataRight_Alt>201704</td><td class=GridDataRight>52.40</td><td class=GridDataRight_Alt>-252.88</td><td class=GridDataRight>-264.45</td><td class=GridDataRight_Alt>-464.93</td></tr><tr><td class=GridDataRight_Alt>201705</td><td class=GridDataRight>157.45</td><td class=GridDataRight_Alt>430.11</td><td class=GridDataRight>104.37</td><td class=GridDataRight_Alt>691.93</td></tr><tr><td class=GridDataRight_Alt>201706</td><td class=GridDataRight>-313.42</td><td class=GridDataRight_Alt>1097.35</td><td class=GridDataRight>226.53</td><td class=GridDataRight_Alt>1010.46</td></tr><tr><td class=GridDataRight_Alt>201707</td><td class=GridDataRight>-68.09</td><td class=GridDataRight_Alt>151.57</td><td class=GridDataRight>18.45</td><td class=GridDataRight_Alt>101.93</td></tr><tr><td class=GridDataRight_Alt>201708</td><td class=GridDataRight>-607.09</td><td class=GridDataRight_Alt>234.77</td><td class=GridDataRight>-411.47</td><td class=GridDataRight_Alt>-783.79</td></tr><tr><td class=GridDataRight_Alt>201709</td><td class=GridDataRight>15.26</td><td class=GridDataRight_Alt>1206.91</td><td class=GridDataRight>170.68</td><td class=GridDataRight_Alt>1392.85</td></tr><tr><td class=GridDataRight_Alt>201710</td><td class=GridDataRight>398.38</td><td class=GridDataRight_Alt>350.22</td><td class=GridDataRight>138.94</td><td class=GridDataRight_Alt>887.54</td></tr><tr><td class=GridDataRight_Alt>201711</td><td class=GridDataRight>533.08</td><td class=GridDataRight_Alt>315.04</td><td class=GridDataRight>178.88</td><td class=GridDataRight_Alt>1027.00</td></tr><tr><td class=GridDataRight_Alt>201712</td><td class=GridDataRight>637.91</td><td class=GridDataRight_Alt>169.54</td><td class=GridDataRight>369.42</td><td class=GridDataRight_Alt>1176.87</td></tr><tr><td class=GridDataRight_Alt>201801</td><td class=GridDataRight>352.81</td><td class=GridDataRight_Alt>-215.98</td><td class=GridDataRight>275.53</td><td class=GridDataRight_Alt>412.36</td></tr><tr><td class=GridDataRight_Alt>201802</td><td class=GridDataRight>-316.53</td><td class=GridDataRight_Alt>1983.12</td><td class=GridDataRight>421.01</td><td class=GridDataRight_Alt>2087.60</td></tr><tr><td class=GridDataRight_Alt>201803</td><td class=GridDataRight>181.59</td><td class=GridDataRight_Alt>1662.53</td><td class=GridDataRight>292.27</td><td class=GridDataRight_Alt>2136.39</td></tr><tr><td class=GridDataRight_Alt>201804</td><td class=GridDataRight>-27.95</td><td class=GridDataRight_Alt>1037.97</td><td class=GridDataRight>111.41</td><td class=GridDataRight_Alt>1121.43</td></tr><tr><td class=GridDataRight_Alt>201805</td><td class=GridDataRight>248.22</td><td class=GridDataRight_Alt>697.93</td><td class=GridDataRight>195.55</td><td class=GridDataRight_Alt>1141.70</td></tr><tr><td class=GridDataRight_Alt>201806</td><td class=GridDataRight>322.34</td><td class=GridDataRight_Alt>764.99</td><td class=GridDataRight>161.04</td><td class=GridDataRight_Alt>1248.37</td></tr><tr><td class=GridDataRight_Alt>201807</td><td class=GridDataRight>208.81</td><td class=GridDataRight_Alt>440.09</td><td class=GridDataRight>151.15</td><td class=GridDataRight_Alt>800.05</td></tr><tr><td class=GridDataRight_Alt>201808</td><td class=GridDataRight>-154.47</td><td class=GridDataRight_Alt>1177.75</td><td class=GridDataRight>366.74</td><td class=GridDataRight_Alt>1390.02</td></tr><tr><td class=GridDataRight_Alt>201809</td><td class=GridDataRight>-200.73</td><td class=GridDataRight_Alt>1151.57</td><td class=GridDataRight>185.23</td><td class=GridDataRight_Alt>1136.07</td></tr><tr><td class=GridDataRight_Alt>201810</td><td class=GridDataRight>-258.83</td><td class=GridDataRight_Alt>816.50</td><td class=GridDataRight>177.97</td><td class=GridDataRight_Alt>735.64</td></tr><tr><td class=GridDataRight_Alt>201811</td><td class=GridDataRight>-1729.69</td><td class=GridDataRight_Alt>364.90</td><td class=GridDataRight>198.62</td><td class=GridDataRight_Alt>-1166.17</td></tr><tr><td class=GridDataRight_Alt>201812</td><td class=GridDataRight>406.55</td><td class=GridDataRight_Alt>152.61</td><td class=GridDataRight>10.26</td><td class=GridDataRight_Alt>569.42</td></tr><tr><td class=GridDataRight_Alt>201901</td><td class=GridDataRight>573.18</td><td class=GridDataRight_Alt>238.11</td><td class=GridDataRight>291.89</td><td class=GridDataRight_Alt>1103.18</td></tr><tr><td class=GridDataRight_Alt>201902</td><td class=GridDataRight>210.26</td><td class=GridDataRight_Alt>-47.07</td><td class=GridDataRight>26.37</td><td class=GridDataRight_Alt>189.56</td></tr><tr><td class=GridDataRight_Alt>201903</td><td class=GridDataRight>1546.88</td><td class=GridDataRight_Alt>512.36</td><td class=GridDataRight>58.92</td><td class=GridDataRight_Alt>2118.16</td></tr><tr><td class=GridDataRight_Alt>201904</td><td class=GridDataRight>1409.53</td><td class=GridDataRight_Alt>547.83</td><td class=GridDataRight>25.81</td><td class=GridDataRight_Alt>1983.17</td></tr><tr><td class=GridDataRight_Alt>201905</td><td class=GridDataRight>-261.43</td><td class=GridDataRight_Alt>468.63</td><td class=GridDataRight>301.99</td><td class=GridDataRight_Alt>509.19</td></tr><tr><td class=GridDataRight_Alt>201906</td><td class=GridDataRight>45.66</td><td class=GridDataRight_Alt>40.26</td><td class=GridDataRight>175.69</td><td class=GridDataRight_Alt>261.61</td></tr><tr><td class=GridDataRight_Alt>201907</td><td class=GridDataRight>-389.06</td><td class=GridDataRight_Alt>439.71</td><td class=GridDataRight>248.99</td><td class=GridDataRight_Alt>299.64</td></tr><tr><td class=GridDataRight_Alt>201908</td><td class=GridDataRight>-79.53</td><td class=GridDataRight_Alt>999.50</td><td class=GridDataRight>69.61</td><td class=GridDataRight_Alt>989.58</td></tr><tr><td class=GridDataRight_Alt>201909</td><td class=GridDataRight>604.54</td><td class=GridDataRight_Alt>229.74</td><td class=GridDataRight>156.50</td><td class=GridDataRight_Alt>990.78</td></tr><tr><td class=GridDataRight_Alt>201910</td><td class=GridDataRight>210.22</td><td class=GridDataRight_Alt>650.48</td><td class=GridDataRight>149.84</td><td class=GridDataRight_Alt>1010.54</td></tr><tr><td class=GridDataRight_Alt>201911</td><td class=GridDataRight>-384.37</td><td class=GridDataRight_Alt>274.93</td><td class=GridDataRight>255.13</td><td class=GridDataRight_Alt>145.69</td></tr><tr><td class=GridDataRight_Alt>201912</td><td class=GridDataRight>-307.81</td><td class=GridDataRight_Alt>-88.85</td><td class=GridDataRight>68.24</td><td class=GridDataRight_Alt>-328.42</td></tr><tr><td class=GridDataRight_Alt>202001</td><td class=GridDataRight>389.99</td><td class=GridDataRight_Alt>324.02</td><td class=GridDataRight>154.68</td><td class=GridDataRight_Alt>868.69</td></tr><tr><td class=GridDataRight_Alt>202002</td><td class=GridDataRight>-166.33</td><td class=GridDataRight_Alt>85.97</td><td class=GridDataRight>55.22</td><td class=GridDataRight_Alt>-25.14</td></tr><tr><td class=GridDataRight_Alt>202003</td><td class=GridDataRight>2.48</td><td class=GridDataRight_Alt>1592.56</td><td class=GridDataRight>326.58</td><td class=GridDataRight_Alt>1921.62</td></tr><tr><td class=GridDataRight_Alt>202004</td><td class=GridDataRight>-1131.84</td><td class=GridDataRight_Alt>1980.40</td><td class=GridDataRight>104.47</td><td class=GridDataRight_Alt>953.03</td></tr><tr><td class=GridDataRight_Alt>202005</td><td class=GridDataRight>-236.45</td><td class=GridDataRight_Alt>812.50</td><td class=GridDataRight>125.80</td><td class=GridDataRight_Alt>701.85</td></tr><tr><td class=GridDataRight_Alt>202006</td><td class=GridDataRight>-417.64</td><td class=GridDataRight_Alt>1648.92</td><td class=GridDataRight>113.92</td><td class=GridDataRight_Alt>1345.20</td></tr><tr><td class=GridDataRight_Alt>202007</td><td class=GridDataRight>8.80</td><td class=GridDataRight_Alt>1107.84</td><td class=GridDataRight>215.03</td><td class=GridDataRight_Alt>1331.67</td></tr><tr><td class=GridDataRight_Alt>202008</td><td class=GridDataRight>1.34</td><td class=GridDataRight_Alt>492.40</td><td class=GridDataRight>37.78</td><td class=GridDataRight_Alt>531.52</td></tr><tr><td class=GridDataRight_Alt>202009</td><td class=GridDataRight>-176.83</td><td class=GridDataRight_Alt>168.75</td><td class=GridDataRight>79.14</td><td class=GridDataRight_Alt>71.06</td></tr><tr><td class=GridDataRight_Alt>202010</td><td class=GridDataRight>-333.17</td><td class=GridDataRight_Alt>1222.72</td><td class=GridDataRight>170.81</td><td class=GridDataRight_Alt>1060.36</td></tr><tr><td class=GridDataRight_Alt>202011</td><td class=GridDataRight>-32.79</td><td class=GridDataRight_Alt>838.59</td><td class=GridDataRight>211.84</td><td class=GridDataRight_Alt>1017.64</td></tr><tr><td class=GridDataRight_Alt>202012</td><td class=GridDataRight>202.09</td><td class=GridDataRight_Alt>486.96</td><td class=GridDataRight>201.56</td><td class=GridDataRight_Alt>890.61</td></tr><tr><td class=GridDataRight_Alt>202101</td><td class=GridDataRight>-621.61</td><td class=GridDataRight_Alt>257.94</td><td class=GridDataRight>463.81</td><td class=GridDataRight_Alt>100.14</td></tr><tr><td class=GridDataRight_Alt>202102</td><td class=GridDataRight>587.50</td><td class=GridDataRight_Alt>-60.05</td><td class=GridDataRight>350.58</td><td class=GridDataRight_Alt>878.03</td></tr><tr><td class=GridDataRight_Alt>202103</td><td class=GridDataRight>-1620.38</td><td class=GridDataRight_Alt>-111.73</td><td class=GridDataRight>215.44</td><td class=GridDataRight_Alt>-1516.67</td></tr><tr><td class=GridDataRight_Alt>202104</td><td class=GridDataRight>-445.73</td><td class=GridDataRight_Alt>2895.32</td><td class=GridDataRight>372.22</td><td class=GridDataRight_Alt>2821.81</td></tr><tr><td class=GridDataRight_Alt>202105</td><td class=GridDataRight>-151.05</td><td class=GridDataRight_Alt>-204.52</td><td class=GridDataRight>-39.60</td><td class=GridDataRight_Alt>-395.17</td></tr><tr><td class=GridDataRight_Alt>202106</td><td class=GridDataRight>-177.59</td><td class=GridDataRight_Alt>91.09</td><td class=GridDataRight>185.29</td><td class=GridDataRight_Alt>98.79</td></tr><tr><td class=GridDataRight_Alt>202107</td><td class=GridDataRight>-100.19</td><td class=GridDataRight_Alt>356.27</td><td class=GridDataRight>345.35</td><td class=GridDataRight_Alt>601.43</td></tr><tr><td class=GridDataRight_Alt>202108</td><td class=GridDataRight>-267.45</td><td class=GridDataRight_Alt>-674.48</td><td class=GridDataRight>255.87</td><td class=GridDataRight_Alt>-686.06</td></tr><tr><td class=GridDataRight_Alt>202109</td><td class=GridDataRight>-381.06</td><td class=GridDataRight_Alt>-536.53</td><td class=GridDataRight>219.69</td><td class=GridDataRight_Alt>-697.90</td></tr><tr><td class=GridDataRight_Alt>202110</td><td class=GridDataRight>-144.85</td><td class=GridDataRight_Alt>1235.79</td><td class=GridDataRight>448.08</td><td class=GridDataRight_Alt>1539.02</td></tr><tr><td class=GridDataRight_Alt>202111</td><td class=GridDataRight>-132.24</td><td class=GridDataRight_Alt>-787.63</td><td class=GridDataRight>241.06</td><td class=GridDataRight_Alt>-678.81</td></tr><tr><td class=GridDataRight_Alt>202112</td><td class=GridDataRight>-518.54</td><td class=GridDataRight_Alt>549.34</td><td class=GridDataRight>440.68</td><td class=GridDataRight_Alt>471.48</td></tr><tr><td class=GridDataRight_Alt>202201</td><td class=GridDataRight>-65.00</td><td class=GridDataRight_Alt>-485.04</td><td class=GridDataRight>195.60</td><td class=GridDataRight_Alt>-354.44</td></tr><tr><td class=GridDataRight_Alt>202202</td><td class=GridDataRight>-796.40</td><td class=GridDataRight_Alt>21.97</td><td class=GridDataRight>404.37</td><td class=GridDataRight_Alt>-370.06</td></tr><tr><td class=GridDataRight_Alt>202203</td><td class=GridDataRight>-374.85</td><td class=GridDataRight_Alt>870.68</td><td class=GridDataRight>387.80</td><td class=GridDataRight_Alt>883.63</td></tr><tr><td class=GridDataRight_Alt>202204</td><td class=GridDataRight>-783.38</td><td class=GridDataRight_Alt>1086.40</td><td class=GridDataRight>274.69</td><td class=GridDataRight_Alt>577.71</td></tr><tr><td class=GridDataRight_Alt>202205</td><td class=GridDataRight>-224.34</td><td class=GridDataRight_Alt>-16.16</td><td class=GridDataRight>84.82</td><td class=GridDataRight_Alt>-155.68</td></tr><tr><td class=GridDataRight_Alt>202206</td><td class=GridDataRight>-229.76</td><td class=GridDataRight_Alt>-89.33</td><td class=GridDataRight>246.51</td><td class=GridDataRight_Alt>-72.58</td></tr><tr><td class=GridDataRight_Alt>202207</td><td class=GridDataRight>197.33</td><td class=GridDataRight_Alt>300.57</td><td class=GridDataRight>570.95</td><td class=GridDataRight_Alt>1068.84</td></tr><tr><td class=GridDataRight_Alt>202208</td><td class=GridDataRight>139.70</td><td class=GridDataRight_Alt>-374.98</td><td class=GridDataRight>251.73</td><td class=GridDataRight_Alt>16.45</td></tr><tr><td class=GridDataRight_Alt>202209</td><td class=GridDataRight>-9.27</td><td class=GridDataRight_Alt>821.00</td><td class=GridDataRight>592.67</td><td class=GridDataRight_Alt>1404.40</td></tr><tr><td class=GridDataRight_Alt>202210</td><td class=GridDataRight>96.03</td><td class=GridDataRight_Alt>-52.65</td><td class=GridDataRight>167.97</td><td class=GridDataRight_Alt>211.36</td></tr><tr><td class=GridDataRight_Alt>202211</td><td class=GridDataRight>614.80</td><td class=GridDataRight_Alt>-462.27</td><td class=GridDataRight>427.90</td><td class=GridDataRight_Alt>580.43</td></tr><tr><td class=GridDataRight_Alt>202212</td><td class=GridDataRight>839.21</td><td class=GridDataRight_Alt>600.77</td><td class=GridDataRight>337.31</td><td class=GridDataRight_Alt>1777.29</td></tr><tr><td class=GridDataRight_Alt>202301</td><td class=GridDataRight>648.27</td><td class=GridDataRight_Alt>-415.45</td><td class=GridDataRight>323.21</td><td class=GridDataRight_Alt>556.03</td></tr><tr><td class=GridDataRight_Alt>202302</td><td class=GridDataRight>195.60</td><td class=GridDataRight_Alt>28.33</td><td class=GridDataRight>215.61</td><td class=GridDataRight_Alt>439.54</td></tr><tr><td class=GridDataRight_Alt>202303</td><td class=GridDataRight>960.99</td><td class=GridDataRight_Alt>1078.60</td><td class=GridDataRight>545.98</td><td class=GridDataRight_Alt>2585.57</td></tr><tr><td class=GridDataRight_Alt>202304</td><td class=GridDataRight>324.02</td><td class=GridDataRight_Alt>-346.47</td><td class=GridDataRight>-134.09</td><td class=GridDataRight_Alt>-156.54</td></tr><tr><td class=GridDataRight_Alt>202305</td><td class=GridDataRight>199.91</td><td class=GridDataRight_Alt>336.90</td><td class=GridDataRight>242.94</td><td class=GridDataRight_Alt>779.75</td></tr><tr><td class=GridDataRight_Alt>202306</td><td class=GridDataRight>595.03</td><td class=GridDataRight_Alt>491.46</td><td class=GridDataRight>436.25</td><td class=GridDataRight_Alt>1522.74</td></tr><tr><td class=GridDataRight_Alt>202307</td><td class=GridDataRight>323.36</td><td class=GridDataRight_Alt>78.98</td><td class=GridDataRight>402.07</td><td class=GridDataRight_Alt>804.42</td></tr><tr><td class=GridDataRight_Alt>202308</td><td class=GridDataRight>107.01</td><td class=GridDataRight_Alt>300.51</td><td class=GridDataRight>322.55</td><td class=GridDataRight_Alt>730.07</td></tr><tr><td class=GridDataRight_Alt>202309</td><td class=GridDataRight>368.74</td><td class=GridDataRight_Alt>748.63</td><td class=GridDataRight>557.32</td><td class=GridDataRight_Alt>1674.69</td></tr><tr><td class=GridDataRight_Alt>202310</td><td class=GridDataRight>143.43</td><td class=GridDataRight_Alt>332.72</td><td class=GridDataRight>218.65</td><td class=GridDataRight_Alt>694.80</td></tr><tr><td class=GridDataRight_Alt>202311</td><td class=GridDataRight>432.50</td><td class=GridDataRight_Alt>363.32</td><td class=GridDataRight>381.86</td><td class=GridDataRight_Alt>1177.68</td></tr><tr><td class=GridDataRight_Alt>202312</td><td class=GridDataRight>955.59</td><td class=GridDataRight_Alt>602.70</td><td class=GridDataRight>489.97</td><td class=GridDataRight_Alt>2048.27</td></tr><tr><td class=GridDataRight_Alt>202401</td><td class=GridDataRight>701.82</td><td class=GridDataRight_Alt>-226.72</td><td class=GridDataRight>346.28</td><td class=GridDataRight_Alt>821.37</td></tr><tr><td class=GridDataRight_Alt>202402</td><td class=GridDataRight>1384.54</td><td class=GridDataRight_Alt>-52.84</td><td class=GridDataRight>316.28</td><td class=GridDataRight_Alt>1647.99</td></tr><tr><td class=GridDataRight_Alt>202403</td><td class=GridDataRight>831.66</td><td class=GridDataRight_Alt>1519.22</td><td class=GridDataRight>543.20</td><td class=GridDataRight_Alt>2894.08</td></tr><tr><td class=GridDataRight_Alt>202404</td><td class=GridDataRight>483.11</td><td class=GridDataRight_Alt>563.77</td><td class=GridDataRight>31.16</td><td class=GridDataRight_Alt>1078.03</td></tr><tr><td class=GridDataRight_Alt>202405</td><td class=GridDataRight>636.40</td><td class=GridDataRight_Alt>616.77</td><td class=GridDataRight>458.53</td><td class=GridDataRight_Alt>1711.69</td></tr><tr><td class=GridDataRight_Alt>202406</td><td class=GridDataRight>561.25</td><td class=GridDataRight_Alt>401.21</td><td class=GridDataRight>272.43</td><td class=GridDataRight_Alt>1234.89</td></tr><tr><td class=GridDataRight_Alt>202407</td><td class=GridDataRight>1158.35</td><td class=GridDataRight_Alt>197.96</td><td class=GridDataRight>439.05</td><td class=GridDataRight_Alt>1795.35</td></tr><tr><td class=GridDataRight_Alt>202408</td><td class=GridDataRight>631.63</td><td class=GridDataRight_Alt>732.74</td><td class=GridDataRight>643.81</td><td class=GridDataRight_Alt>2008.17</td></tr><tr><td class=GridDataRight_Alt>202409</td><td class=GridDataRight>1876.22</td><td class=GridDataRight_Alt>138.08</td><td class=GridDataRight>349.56</td><td class=GridDataRight_Alt>2363.86</td></tr><tr><td class=GridDataRight_Alt>202410</td><td class=GridDataRight>790.76</td><td class=GridDataRight_Alt>439.88</td><td class=GridDataRight>474.11</td><td class=GridDataRight_Alt>1704.76</td></tr><tr><td class=GridDataRight_Alt>202411</td><td class=GridDataRight>168.97</td><td class=GridDataRight_Alt>294.04</td><td class=GridDataRight>191.92</td><td class=GridDataRight_Alt>654.93</td></tr><tr><td class=GridDataRight_Alt>202412</td><td class=GridDataRight>158.08</td><td class=GridDataRight_Alt>187.62</td><td class=GridDataRight>435.71</td><td class=GridDataRight_Alt>781.41</td></tr><tr><td class=GridDataRight_Alt>202501</td><td class=GridDataRight>555.98</td><td class=GridDataRight_Alt>137.51</td><td class=GridDataRight>287.38</td><td class=GridDataRight_Alt>980.87</td></tr><tr><td class=GridDataRight_Alt>202502</td><td class=GridDataRight>-262.02</td><td class=GridDataRight_Alt>299.96</td><td class=GridDataRight>206.45</td><td class=GridDataRight_Alt>244.40</td></tr><tr><td class=GridDataRight_Alt>202503</td><td class=GridDataRight>317.38</td><td class=GridDataRight_Alt>703.85</td><td class=GridDataRight>583.66</td><td class=GridDataRight_Alt>1604.89</td></tr><tr><td class=GridDataRight_Alt>202504</td><td class=GridDataRight>271.57</td><td class=GridDataRight_Alt>376.18</td><td class=GridDataRight>102.92</td><td class=GridDataRight_Alt>750.67</td></tr><tr><td class=GridDataRight_Alt>202505</td><td class=GridDataRight>170.71</td><td class=GridDataRight_Alt>632.81</td><td class=GridDataRight>331.26</td><td class=GridDataRight_Alt>1134.77</td></tr><tr><td class=GridDataRight_Alt>202506</td><td class=GridDataRight>331.69</td><td class=GridDataRight_Alt>981.62</td><td class=GridDataRight>415.41</td><td class=GridDataRight_Alt>1728.71</td></tr><tr><td class=GridDataRight_Alt>202507</td><td class=GridDataRight>-2.32</td><td class=GridDataRight_Alt>427.06</td><td class=GridDataRight>618.50</td><td class=GridDataRight_Alt>1043.24</td></tr><tr><td class=GridDataRight_Alt>202508</td><td class=GridDataRight>-151.34</td><td class=GridDataRight_Alt>718.08</td><td class=GridDataRight>408.81</td><td class=GridDataRight_Alt>975.55</td></tr><tr><td class=GridDataRight_Alt>202509</td><td class=GridDataRight>69.98</td><td class=GridDataRight_Alt>68.84</td><td class=GridDataRight>296.33</td><td class=GridDataRight_Alt>435.14</td></tr><tr><td class=GridDataRight_Alt>202510</td><td class=GridDataRight>903.32</td><td class=GridDataRight_Alt>751.12</td><td class=GridDataRight>657.51</td><td class=GridDataRight_Alt>2311.94</td></tr><tr><td class=GridDataRight_Alt>202511</td><td class=GridDataRight>269.15</td><td class=GridDataRight_Alt>305.10</td><td class=GridDataRight>263.60</td><td class=GridDataRight_Alt>837.85</td></tr><tr><td class=GridDataRight_Alt>202512</td><td class=GridDataRight>178.99</td><td class=GridDataRight_Alt>804.43</td><td class=GridDataRight>1002.22</td><td class=GridDataRight_Alt>1985.63</td></tr><tr><td class=GridDataRight_Alt>202601</td><td class=GridDataRight>-1097.52</td><td class=GridDataRight_Alt>313.96</td><td class=GridDataRight>286.41</td><td class=GridDataRight_Alt>-497.15</td></tr><tr><td class=GridDataRight_Alt>202602</td><td class=GridDataRight>-33.24</td><td class=GridDataRight_Alt>-191.10</td><td class=GridDataRight>556.66</td><td class=GridDataRight_Alt>332.32</td></tr><tr><td style='display:none' align='left' colspan='5'>Source : Ace Knowledge Portal</td></tr></table></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

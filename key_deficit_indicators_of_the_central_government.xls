@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	:: Knowledge Portal ::
+</title>
+    <style type="text/css">
+        body
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Sans' , sans-serif;
+            color: #686868;
+            font-size: 13px;
+        }
+        
+        
+        .GridHeadLeft_Fin
+        {
+            background-color: #dadfe3;
+            background-position: center center;
+            background-repeat: repeat-x;
+            border-left: 1px solid #585858;
+            border-right: 1px solid #585858;
+            border-bottom: 1px solid #585858;
+            color: #000000;
+            font-size: 11px;
+            height: 26px;
+            padding-left: 10px;
+            text-align: left;
+            text-decoration: none;
+        }
+        
+        .GridHeadCenter_Fin
+        {
+            background-color: #dadfe3;
+            background-position: center center;
+            background-repeat: repeat-x;
+            border-right: 1px solid #585858;
+            border-bottom: 1px solid #585858;
+            color: #000000;
+            font-size: 11px;
+            height: 26px;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .GridHeadRight_Fin
+        {
+            background-color: #dadfe3;
+            background-position: center center;
+            background-repeat: repeat-x;
+            border-right: 1px solid #585858;
+            border-bottom: 1px solid #585858;
+            color: #000000;
+            font-size: 11px;
+            height: 26px;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: right;
+            text-decoration: none;
+        }
+        
+        .GridDataRight_Alt
+        {
+            border-bottom: 1px solid #585858;
+            border-right: 1px solid #585858;
+            color: #585858;
+            cursor: default;
+            font-size: 11px;
+            line-height: 20px;
+            padding-right: 10px;
+            text-align: right;
+        }
+        .GridDataLeft_Alt
+        {
+            border-bottom: 1px solid #585858;
+            border-left: 1px solid #585858;
+            border-right: 1px solid #585858;
+            color: #585858;
+            cursor: default;
+            font-size: 11px;
+            line-height: 20px;
+            padding-right: 10px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .GridDataCenter_Alt
+        {
+            border-bottom: 1px solid #585858;
+            border-style: none;
+            color: #585858;
+            cursor: default;
+            font-size: 11px;
+            line-height: 20px;
+            padding-right: 10px;
+            text-align: center;
+        }
+        
+        .GridDataRight
+        {
+            border-bottom: 1px solid #585858;
+            border-right: 1px solid #585858;
+            color: #323131;
+            cursor: default;
+            font-size: 11px;
+            font-weight: normal;
+            padding-right: 10px;
+            text-align: right;
+            line-height: 32px;
+        }
+        .GridDataCenter
+        {
+            border-bottom: 1px solid #585858;
+            color: #323131;
+            cursor: default;
+            font-size: 11px;
+            font-weight: normal;
+            padding-right: 10px;
+            text-align: center;
+            line-height: 32px;
+        }
+        .GridDataLeft
+        {
+            border-right: 1px solid #585858;
+            border-bottom: 1px solid #585858;
+            border-left: 1px solid #585858;
+            color: #323131;
+            cursor: default;
+            font-size: 11px;
+            font-weight: normal;
+            padding-left: 10px;
+            text-align: left;
+            line-height: 32px;
+        }
+        
+        .DropDown
+        {
+            background: none repeat scroll 0 0 #F7FBFD;
+            border: 1px solid #D2D8DE;
+            line-height: 20px;
+            width: 85px;
+        }
+        .btnGo_Css
+        {
+            background-color: #009EF3;
+            border: medium none;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Arial,Verdana;
+            font-size: 12px;
+            height: 20px;
+            width: 26px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .NewsTime
+        {
+            border-bottom: 1px solid #585858;
+            color: #17a7f4;
+            font-weight: normal;
+            line-height: 22px;
+        }
+        .NewsHeading
+        {
+            border-bottom: 1px solid #585858;
+            color: #737373;
+            font-weight: normal;
+            line-height: 22px;
+            padding-left: 7px;
+            text-align: left;
+        }
+        .HomeNewsHead
+        {
+            color: #0089D2;
+            font-weight: bold;
+            line-height: 18px;
+            padding-left: 7px;
+            text-align: left;
+        }
+        .HomeNewsDate
+        {
+            color: #0089D2;
+            font-weight: bold;
+            line-height: 25px;
+            padding-left: 7px;
+            text-align: left;
+            text-decoration: none;
+        }
+        a.NewsHeading, a.NewsHeading:link, a.NewsHeading:visited, a.NewsHeading:active, a.NewsHeading:focus
+        {
+            color: #737373;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        .Newsdate
+        {
+            border-bottom: 1px solid #585858;
+            color: #066192;
+            font-weight: normal;
+            line-height: 22px;
+            padding-left: 7px;
+            text-align: left;
+            text-decoration: none;
+        }
+        .NoData
+        {
+            color: #FF0000;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .NewsDetails
+        {
+            color: #4e4f50;
+            font-weight: normal;
+            padding-left: 5px;
+            line-height: 22px;
+            text-align: justify;
+            text-decoration: none;
+        }
+        .NewsHeadingDate
+        {
+            color: #0089d2;
+            font-weight: bold;
+            line-height: 18px;
+            padding-left: 2px;
+            text-align: left;
+        }
+        .Prev, .Nxt
+        {
+            background: none repeat scroll 0 0 #8596a5;
+            cursor: default;
+            float: left;
+            height: 15px;
+            margin-right: 1px;
+            position: relative;
+            width: 15px;
+        }
+        .Prev span, .Nxt span
+        {
+            display: block;
+            height: 0;
+            position: absolute;
+            top: 2px;
+            width: 0;
+        }
+        .Prev span
+        {
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid #FFFFFF;
+            border-top: 5px solid transparent;
+            left: 5px;
+        }
+        .Nxt span
+        {
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid #FFFFFF;
+            border-top: 5px solid transparent;
+            right: 4px;
+        }
+        .Prev:hover, .Nxt:hover, .Prev.PNActive, .Nxt.PNActive
+        {
+            background: none repeat scroll 0 0 #0a81c0;
+        }
+        .Green_Page
+        {
+            color: #0a81c0;
+        }
+        .HeadBox
+        {
+            background: none repeat scroll 0 0 #009EF3;
+            color: #FFFFFF;
+            font-weight: normal;
+            margin-bottom: 3px;
+            padding: 6px 0 6px 12px;
+        }
+        .ContentBox
+        {
+            background-color: #FFFFFF;
+            border: 1px solid #D4D4D4;
+            line-height: 22px;
+            padding: 10px;
+        }
+        .NewsContentBox
+        {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #D4D4D4;
+            border-left: 1px solid #D4D4D4;
+            border-right: 1px solid #D4D4D4;
+            line-height: 22px;
+            padding: 10px;
+        }
+        .MoreNews
+        {
+            color: #066192;
+            font-size: 12px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        a.MoreNews:link, a.MoreNews:visited, a.MoreNews:active, a.MoreNews:focus, a.MoreNews:hover
+        {
+            color: #066192;
+            cursor: pointer;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .CursorHand
+        {
+            cursor: pointer;
+        }
+        .CursorMove
+        {
+            cursor: move;
+        }
+        .HLinkcontainer ul
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 0 0 5px;
+        }
+        .HLinkcontainer ul li
+        {
+            line-height: 22px;
+            list-style-type: none;
+        }
+        .HLinkcontainer ul li a:link, .HLinkcontainer ul li a:visited, .HLinkcontainer ul li a:active
+        {
+            color: #8C9197;
+            text-decoration: none;
+        }
+        .HLinkcontainer ul li a:hover
+        {
+            color: #066192;
+            text-decoration: none;
+        }
+        
+        
+        .Css_BreadCrumb
+        {
+            color: #686868;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .Css_BreadCrumb a:link, .Css_BreadCrumb a:visited, .Css_BreadCrumb a:active
+        {
+            color: #686868;
+            text-decoration: none;
+        }
+        
+        input[type="radio"]
+        {
+            background: none;
+            border: none;
+            width: 20px;
+        }
+    </style>
+</head>
+<body style="background-image: none">
+    <form method="post" action="./ExportToExcel.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="1/6Wv2OyO860OHdNATo3UB3RZEk3KlKfrCOatx4DpUb737EXPe641VjnLJxO+vTKIlBU9kou3jA2OJT4ADOuew6xMSVFTHd2nTGLC+qmj30=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C4A7F4AE" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+    <div>
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td style="font-weight: bold; font-size: 16px">
+                    Key Deficit Indicators Of The Central Government&nbsp;(1970-71&nbsp;-&nbsp;2025-26)
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #585858;">
+                    <div  id='Fin_Freeze' style='overflow:auto;width:100%;border-left:0 px gray solid;border-bottom:0 px gray solid;padding:0px;margin:0 px;'><table CellSpacing='1' cellpadding='0' Width='100%'><tr><td colspan=9 class='GridHeadCenter_Fin'></td></tr><tr><td class=GridHeadLeft_Fin>Year</td><td class=GridHeadRight_Fin>Gross Fiscal Deficit</td><td class=GridHeadRight_Fin>Net Fiscal Deficit</td><td class=GridHeadRight_Fin>Gross Primary Deficit</td><td class=GridHeadRight_Fin>Net Primary Deficit</td><td class=GridHeadRight_Fin>Revenue Deficit</td><td class=GridHeadRight_Fin>Primary Revenue Deficit</td><td class=GridHeadRight_Fin>Financing of GFD-Drawdown of cash Balence</td><td class=GridHeadRight_Fin>Net RBI credit</td></tr><tr><td class=GridDataLeft_Alt>2025-26</td><td class=GridDataRight>1568936.00</td><td class=GridDataRight_Alt>1372091.52</td><td class=GridDataRight>292598.00</td><td class=GridDataRight_Alt>143491.50</td><td class=GridDataRight>523846.00</td><td class=GridDataRight_Alt>-752492.00</td><td class=GridDataRight>2484.38</td><td class=GridDataRight_Alt>NA</td></tr><tr><td class=GridDataLeft_Alt>2024-25</td><td class=GridDataRight>1569527.00</td><td class=GridDataRight_Alt>1424833.96</td><td class=GridDataRight>431587.00</td><td class=GridDataRight_Alt>320935.82</td><td class=GridDataRight>610098.00</td><td class=GridDataRight_Alt>-527842.00</td><td class=GridDataRight>140115.15</td><td class=GridDataRight_Alt>288804.53</td></tr><tr><td class=GridDataLeft_Alt>2023-24</td><td class=GridDataRight>1654643.00</td><td class=GridDataRight_Alt>1520193.97</td><td class=GridDataRight>590771.00</td><td class=GridDataRight_Alt>494582.58</td><td class=GridDataRight>765216.00</td><td class=GridDataRight_Alt>-298656.00</td><td class=GridDataRight>793.83</td><td class=GridDataRight_Alt>-263721.04</td></tr><tr><td class=GridDataLeft_Alt>2022-23</td><td class=GridDataRight>1737755.00</td><td class=GridDataRight_Alt>1648648.09</td><td class=GridDataRight>809238.00</td><td class=GridDataRight_Alt>747983.32</td><td class=GridDataRight>1069926.00</td><td class=GridDataRight_Alt>141409.00</td><td class=GridDataRight>-1622.12</td><td class=GridDataRight_Alt>1404.00</td></tr><tr><td class=GridDataLeft_Alt>2021-22</td><td class=GridDataRight>1584521.00</td><td class=GridDataRight_Alt>1550882.23</td><td class=GridDataRight>779022.00</td><td class=GridDataRight_Alt>767257.23</td><td class=GridDataRight>1031021.00</td><td class=GridDataRight_Alt>225522.00</td><td class=GridDataRight>2543.00</td><td class=GridDataRight_Alt>352627.00</td></tr><tr><td class=GridDataLeft_Alt>2020-21</td><td class=GridDataRight>1818291.00</td><td class=GridDataRight_Alt>1727528.74</td><td class=GridDataRight>1138422.00</td><td class=GridDataRight_Alt>1064774.00</td><td class=GridDataRight>1449599.00</td><td class=GridDataRight_Alt>769730.00</td><td class=GridDataRight>-7188.00</td><td class=GridDataRight_Alt>106604.00</td></tr><tr><td class=GridDataLeft_Alt>2019-20</td><td class=GridDataRight>933651.00</td><td class=GridDataRight_Alt>927553.33</td><td class=GridDataRight>321581.00</td><td class=GridDataRight_Alt>327832.31</td><td class=GridDataRight>666545.00</td><td class=GridDataRight_Alt>54475.00</td><td class=GridDataRight>4971.00</td><td class=GridDataRight_Alt>189268.00</td></tr><tr><td class=GridDataLeft_Alt>2018-19</td><td class=GridDataRight>649418.00</td><td class=GridDataRight_Alt>639249.00</td><td class=GridDataRight>66770.00</td><td class=GridDataRight_Alt>68746.00</td><td class=GridDataRight>454483.00</td><td class=GridDataRight_Alt>-128165.00</td><td class=GridDataRight>-1321.00</td><td class=GridDataRight_Alt>326187.00</td></tr><tr><td class=GridDataLeft_Alt>2017-18</td><td class=GridDataRight>591062.08</td><td class=GridDataRight_Alt>588668.05</td><td class=GridDataRight>62110.00</td><td class=GridDataRight_Alt>73290.00</td><td class=GridDataRight>443600.00</td><td class=GridDataRight_Alt>-85352.00</td><td class=GridDataRight>4090.75</td><td class=GridDataRight_Alt>-145305.00</td></tr><tr><td class=GridDataLeft_Alt>2016-17</td><td class=GridDataRight>535618.00</td><td class=GridDataRight_Alt>516438.15</td><td class=GridDataRight>54904.00</td><td class=GridDataRight_Alt>51953.00</td><td class=GridDataRight>316381.00</td><td class=GridDataRight_Alt>-164333.00</td><td class=GridDataRight>-8895.00</td><td class=GridDataRight_Alt>195029.00</td></tr><tr><td class=GridDataLeft_Alt>2015-16</td><td class=GridDataRight>532791.00</td><td class=GridDataRight_Alt>527289.00</td><td class=GridDataRight>91132.00</td><td class=GridDataRight_Alt>111008.00</td><td class=GridDataRight>342736.00</td><td class=GridDataRight_Alt>-98923.00</td><td class=GridDataRight>13170.00</td><td class=GridDataRight_Alt>63524.00</td></tr><tr><td class=GridDataLeft_Alt>2014-15</td><td class=GridDataRight>510725.00</td><td class=GridDataRight_Alt>495245.00</td><td class=GridDataRight>108281.00</td><td class=GridDataRight_Alt>116605.00</td><td class=GridDataRight>365519.00</td><td class=GridDataRight_Alt>-36925.00</td><td class=GridDataRight>77752.00</td><td class=GridDataRight_Alt>-336605.00</td></tr><tr><td class=GridDataLeft_Alt>2013-14</td><td class=GridDataRight>502858.00</td><td class=GridDataRight_Alt>496157.00</td><td class=GridDataRight>128604.00</td><td class=GridDataRight_Alt>143771.00</td><td class=GridDataRight>357048.00</td><td class=GridDataRight_Alt>-17206.00</td><td class=GridDataRight>-19170.95</td><td class=GridDataRight_Alt>107144.00</td></tr><tr><td class=GridDataLeft_Alt>2012-13</td><td class=GridDataRight>490190.00</td><td class=GridDataRight_Alt>484449.64</td><td class=GridDataRight>177020.00</td><td class=GridDataRight_Alt>192040.64</td><td class=GridDataRight>364282.00</td><td class=GridDataRight_Alt>51112.00</td><td class=GridDataRight>-51012.00</td><td class=GridDataRight_Alt>56086.00</td></tr><tr><td class=GridDataLeft_Alt>2011-12</td><td class=GridDataRight>515990.00</td><td class=GridDataRight_Alt>514103.00</td><td class=GridDataRight>242840.00</td><td class=GridDataRight_Alt>261205.00</td><td class=GridDataRight>394348.00</td><td class=GridDataRight_Alt>121198.00</td><td class=GridDataRight>-15990.00</td><td class=GridDataRight_Alt>140378.00</td></tr><tr><td class=GridDataLeft_Alt>2010-11</td><td class=GridDataRight>373592.00</td><td class=GridDataRight_Alt>361025.94</td><td class=GridDataRight>139569.00</td><td class=GridDataRight_Alt>146737.94</td><td class=GridDataRight>252252.00</td><td class=GridDataRight_Alt>18230.00</td><td class=GridDataRight>6430.00</td><td class=GridDataRight_Alt>182454.00</td></tr><tr><td class=GridDataLeft_Alt>2009-10 </td><td class=GridDataRight>418482.00</td><td class=GridDataRight_Alt>411448.00</td><td class=GridDataRight>205389.00</td><td class=GridDataRight_Alt>220139.00</td><td class=GridDataRight>338998.00</td><td class=GridDataRight_Alt>125905.00</td><td class=GridDataRight>-1386.00</td><td class=GridDataRight_Alt>149820.00</td></tr><tr><td class=GridDataLeft_Alt>2008-09 </td><td class=GridDataRight>336992.00</td><td class=GridDataRight_Alt>329024.00</td><td class=GridDataRight>144788.00</td><td class=GridDataRight_Alt>157537.00</td><td class=GridDataRight>253539.00</td><td class=GridDataRight_Alt>61335.00</td><td class=GridDataRight>43834.00</td><td class=GridDataRight_Alt>176397.00</td></tr><tr><td class=GridDataLeft_Alt>2007-08 </td><td class=GridDataRight>126912.00</td><td class=GridDataRight_Alt>120714.00</td><td class=GridDataRight>-44118.00</td><td class=GridDataRight_Alt>-29256.00</td><td class=GridDataRight>52569.00</td><td class=GridDataRight_Alt>-118461.00</td><td class=GridDataRight>-27171.00</td><td class=GridDataRight_Alt>-116772.00</td></tr><tr><td class=GridDataLeft_Alt>2006-07 </td><td class=GridDataRight>142573.00</td><td class=GridDataRight_Alt>151245.00</td><td class=GridDataRight>-7699.00</td><td class=GridDataRight_Alt>23497.00</td><td class=GridDataRight>80222.00</td><td class=GridDataRight_Alt>-70050.00</td><td class=GridDataRight>4517.00</td><td class=GridDataRight_Alt>-3024.00</td></tr><tr><td class=GridDataLeft_Alt>2005-06 </td><td class=GridDataRight>146435.00</td><td class=GridDataRight_Alt>145743.00</td><td class=GridDataRight>13805.00</td><td class=GridDataRight_Alt>35145.00</td><td class=GridDataRight>92300.00</td><td class=GridDataRight_Alt>-40331.00</td><td class=GridDataRight>-20888.00</td><td class=GridDataRight_Alt>28417.00</td></tr><tr><td class=GridDataLeft_Alt>2004-05 </td><td class=GridDataRight>125794.00</td><td class=GridDataRight_Alt>126252.00</td><td class=GridDataRight>-1140.00</td><td class=GridDataRight_Alt>31705.00</td><td class=GridDataRight>78338.00</td><td class=GridDataRight_Alt>-48596.00</td><td class=GridDataRight>-1461.00</td><td class=GridDataRight_Alt>-60177.00</td></tr><tr><td class=GridDataLeft_Alt>2003-04 </td><td class=GridDataRight>123273.00</td><td class=GridDataRight_Alt>115558.00</td><td class=GridDataRight>-815.00</td><td class=GridDataRight_Alt>30008.00</td><td class=GridDataRight>98261.00</td><td class=GridDataRight_Alt>-25827.00</td><td class=GridDataRight>-3942.00</td><td class=GridDataRight_Alt>-76065.00</td></tr><tr><td class=GridDataLeft_Alt>2002-03 </td><td class=GridDataRight>145072.00</td><td class=GridDataRight_Alt>133829.00</td><td class=GridDataRight>27268.00</td><td class=GridDataRight_Alt>53647.00</td><td class=GridDataRight>107879.00</td><td class=GridDataRight_Alt>-9925.00</td><td class=GridDataRight>1883.00</td><td class=GridDataRight_Alt>-28399.00</td></tr><tr><td class=GridDataLeft_Alt>2001-02 </td><td class=GridDataRight>140955.00</td><td class=GridDataRight_Alt>123074.00</td><td class=GridDataRight>33495.00</td><td class=GridDataRight_Alt>51152.00</td><td class=GridDataRight>100162.00</td><td class=GridDataRight_Alt>-7298.00</td><td class=GridDataRight>-1496.00</td><td class=GridDataRight_Alt>-5150.00</td></tr><tr><td class=GridDataLeft_Alt>2000-01 </td><td class=GridDataRight>118816.00</td><td class=GridDataRight_Alt>107854.00</td><td class=GridDataRight>19502.00</td><td class=GridDataRight_Alt>41351.00</td><td class=GridDataRight>85234.00</td><td class=GridDataRight_Alt>-14080.00</td><td class=GridDataRight>-1197.00</td><td class=GridDataRight_Alt>6705.00</td></tr><tr><td class=GridDataLeft_Alt>1999-00 </td><td class=GridDataRight>104716.00</td><td class=GridDataRight_Alt>89910.00</td><td class=GridDataRight>14467.00</td><td class=GridDataRight_Alt>33556.00</td><td class=GridDataRight>67596.00</td><td class=GridDataRight_Alt>-22653.00</td><td class=GridDataRight>864.00</td><td class=GridDataRight_Alt>-5588.00</td></tr><tr><td class=GridDataLeft_Alt>1998-99 </td><td class=GridDataRight>113349.00</td><td class=GridDataRight_Alt>79944.00</td><td class=GridDataRight>35466.00</td><td class=GridDataRight_Alt>32138.00</td><td class=GridDataRight>66976.00</td><td class=GridDataRight_Alt>-10906.00</td><td class=GridDataRight>-209.00</td><td class=GridDataRight_Alt>11800.00</td></tr><tr><td class=GridDataLeft_Alt>1997-98 </td><td class=GridDataRight>88937.00</td><td class=GridDataRight_Alt>63062.00</td><td class=GridDataRight>23300.00</td><td class=GridDataRight_Alt>22748.00</td><td class=GridDataRight>46449.00</td><td class=GridDataRight_Alt>-19188.00</td><td class=GridDataRight>-910.00</td><td class=GridDataRight_Alt>12914.00</td></tr><tr><td class=GridDataLeft_Alt>1996-97 </td><td class=GridDataRight>66733.00</td><td class=GridDataRight_Alt>46394.00</td><td class=GridDataRight>7255.00</td><td class=GridDataRight_Alt>9022.00</td><td class=GridDataRight>32654.00</td><td class=GridDataRight_Alt>-26824.00</td><td class=GridDataRight>13184.00</td><td class=GridDataRight_Alt>1934.00</td></tr><tr><td class=GridDataLeft_Alt>1995-96 </td><td class=GridDataRight>60243.00</td><td class=GridDataRight_Alt>42432.00</td><td class=GridDataRight>10198.00</td><td class=GridDataRight_Alt>10806.00</td><td class=GridDataRight>29731.00</td><td class=GridDataRight_Alt>-20314.00</td><td class=GridDataRight>9807.00</td><td class=GridDataRight_Alt>19855.00</td></tr><tr><td class=GridDataLeft_Alt>1994-95 </td><td class=GridDataRight>57703.00</td><td class=GridDataRight_Alt>40313.00</td><td class=GridDataRight>13644.00</td><td class=GridDataRight_Alt>12050.00</td><td class=GridDataRight>31029.00</td><td class=GridDataRight_Alt>-13031.00</td><td class=GridDataRight>961.00</td><td class=GridDataRight_Alt>2130.00</td></tr><tr><td class=GridDataLeft_Alt>1993-94 </td><td class=GridDataRight>60257.00</td><td class=GridDataRight_Alt>45994.00</td><td class=GridDataRight>23516.00</td><td class=GridDataRight_Alt>24331.00</td><td class=GridDataRight>32716.00</td><td class=GridDataRight_Alt>-4025.00</td><td class=GridDataRight>10960.00</td><td class=GridDataRight_Alt>260.00</td></tr><tr><td class=GridDataLeft_Alt>1992-93 </td><td class=GridDataRight>40173.00</td><td class=GridDataRight_Alt>30232.00</td><td class=GridDataRight>9098.00</td><td class=GridDataRight_Alt>11644.00</td><td class=GridDataRight>18574.00</td><td class=GridDataRight_Alt>-12501.00</td><td class=GridDataRight>12312.00</td><td class=GridDataRight_Alt>4257.00</td></tr><tr><td class=GridDataLeft_Alt>1991-92 </td><td class=GridDataRight>36325.00</td><td class=GridDataRight_Alt>24622.00</td><td class=GridDataRight>9729.00</td><td class=GridDataRight_Alt>8961.00</td><td class=GridDataRight>16261.00</td><td class=GridDataRight_Alt>-10335.00</td><td class=GridDataRight>6855.00</td><td class=GridDataRight_Alt>5508.00</td></tr><tr><td class=GridDataLeft_Alt>1990-91 </td><td class=GridDataRight>44632.00</td><td class=GridDataRight_Alt>30692.00</td><td class=GridDataRight>23134.00</td><td class=GridDataRight_Alt>17924.00</td><td class=GridDataRight>18562.00</td><td class=GridDataRight_Alt>-2936.00</td><td class=GridDataRight>11347.00</td><td class=GridDataRight_Alt>14746.00</td></tr><tr><td class=GridDataLeft_Alt>1989-90 </td><td class=GridDataRight>35632.00</td><td class=GridDataRight_Alt>23722.00</td><td class=GridDataRight>17875.00</td><td class=GridDataRight_Alt>14439.00</td><td class=GridDataRight>11914.00</td><td class=GridDataRight_Alt>-5843.00</td><td class=GridDataRight>10592.00</td><td class=GridDataRight_Alt>13813.00</td></tr><tr><td class=GridDataLeft_Alt>1988-89 </td><td class=GridDataRight>30923.00</td><td class=GridDataRight_Alt>20770.00</td><td class=GridDataRight>16645.00</td><td class=GridDataRight_Alt>13473.00</td><td class=GridDataRight>10515.00</td><td class=GridDataRight_Alt>-3763.00</td><td class=GridDataRight>5642.00</td><td class=GridDataRight_Alt>6503.00</td></tr><tr><td class=GridDataLeft_Alt>1987-88 </td><td class=GridDataRight>27044.00</td><td class=GridDataRight_Alt>18431.00</td><td class=GridDataRight>15793.00</td><td class=GridDataRight_Alt>12935.00</td><td class=GridDataRight>9137.00</td><td class=GridDataRight_Alt>-2114.00</td><td class=GridDataRight>5816.00</td><td class=GridDataRight_Alt>6559.00</td></tr><tr><td class=GridDataLeft_Alt>1986-87 </td><td class=GridDataRight>26342.00</td><td class=GridDataRight_Alt>17036.00</td><td class=GridDataRight>17096.00</td><td class=GridDataRight_Alt>13143.00</td><td class=GridDataRight>7777.00</td><td class=GridDataRight_Alt>-1469.00</td><td class=GridDataRight>8261.00</td><td class=GridDataRight_Alt>7091.00</td></tr><tr><td class=GridDataLeft_Alt>1985-86 </td><td class=GridDataRight>21858.00</td><td class=GridDataRight_Alt>13544.00</td><td class=GridDataRight>14346.00</td><td class=GridDataRight_Alt>10627.00</td><td class=GridDataRight>5889.00</td><td class=GridDataRight_Alt>-1623.00</td><td class=GridDataRight>5316.00</td><td class=GridDataRight_Alt>6190.00</td></tr><tr><td class=GridDataLeft_Alt>1984-85 </td><td class=GridDataRight>17416.00</td><td class=GridDataRight_Alt>10972.00</td><td class=GridDataRight>11442.00</td><td class=GridDataRight_Alt>8961.00</td><td class=GridDataRight>4225.00</td><td class=GridDataRight_Alt>-1749.00</td><td class=GridDataRight>3745.00</td><td class=GridDataRight_Alt>6055.00</td></tr><tr><td class=GridDataLeft_Alt>1983-84 </td><td class=GridDataRight>13030.00</td><td class=GridDataRight_Alt>7770.00</td><td class=GridDataRight>8235.00</td><td class=GridDataRight_Alt>5643.00</td><td class=GridDataRight>2540.00</td><td class=GridDataRight_Alt>-2255.00</td><td class=GridDataRight>1417.00</td><td class=GridDataRight_Alt>3949.00</td></tr><tr><td class=GridDataLeft_Alt>1982-83 </td><td class=GridDataRight>10627.00</td><td class=GridDataRight_Alt>5973.00</td><td class=GridDataRight>6689.00</td><td class=GridDataRight_Alt>4887.00</td><td class=GridDataRight>1308.00</td><td class=GridDataRight_Alt>-2630.00</td><td class=GridDataRight>1656.00</td><td class=GridDataRight_Alt>3368.00</td></tr><tr><td class=GridDataLeft_Alt>1981-82 </td><td class=GridDataRight>8666.00</td><td class=GridDataRight_Alt>4591.00</td><td class=GridDataRight>5471.00</td><td class=GridDataRight_Alt>3611.00</td><td class=GridDataRight>392.00</td><td class=GridDataRight_Alt>-2803.00</td><td class=GridDataRight>1400.00</td><td class=GridDataRight_Alt>3207.00</td></tr><tr><td class=GridDataLeft_Alt>1980-81 </td><td class=GridDataRight>8299.00</td><td class=GridDataRight_Alt>5110.00</td><td class=GridDataRight>5695.00</td><td class=GridDataRight_Alt>4301.00</td><td class=GridDataRight>2037.00</td><td class=GridDataRight_Alt>-567.00</td><td class=GridDataRight>2477.00</td><td class=GridDataRight_Alt>3551.00</td></tr><tr><td class=GridDataLeft_Alt>1979-80 </td><td class=GridDataRight>6392.00</td><td class=GridDataRight_Alt>3133.00</td><td class=GridDataRight>4100.00</td><td class=GridDataRight_Alt>2201.00</td><td class=GridDataRight>694.00</td><td class=GridDataRight_Alt>-1598.00</td><td class=GridDataRight>2433.00</td><td class=GridDataRight_Alt>2650.00</td></tr><tr><td class=GridDataLeft_Alt>1978-79 </td><td class=GridDataRight>5710.00</td><td class=GridDataRight_Alt>2126.00</td><td class=GridDataRight>3726.00</td><td class=GridDataRight_Alt>1569.00</td><td class=GridDataRight>-292.00</td><td class=GridDataRight_Alt>-2276.00</td><td class=GridDataRight>1506.00</td><td class=GridDataRight_Alt>2191.00</td></tr><tr><td class=GridDataLeft_Alt>1977-78 </td><td class=GridDataRight>3680.00</td><td class=GridDataRight_Alt>1813.00</td><td class=GridDataRight>2034.00</td><td class=GridDataRight_Alt>1608.00</td><td class=GridDataRight>-430.00</td><td class=GridDataRight_Alt>-2076.00</td><td class=GridDataRight>932.00</td><td class=GridDataRight_Alt>-260.00</td></tr><tr><td class=GridDataLeft_Alt>1976-77 </td><td class=GridDataRight>3802.00</td><td class=GridDataRight_Alt>1572.00</td><td class=GridDataRight>2314.00</td><td class=GridDataRight_Alt>1189.00</td><td class=GridDataRight>-298.00</td><td class=GridDataRight_Alt>-1786.00</td><td class=GridDataRight>131.00</td><td class=GridDataRight_Alt>816.00</td></tr><tr><td class=GridDataLeft_Alt>1975-76 </td><td class=GridDataRight>3029.00</td><td class=GridDataRight_Alt>1364.00</td><td class=GridDataRight>1802.00</td><td class=GridDataRight_Alt>1070.00</td><td class=GridDataRight>-886.00</td><td class=GridDataRight_Alt>-2114.00</td><td class=GridDataRight>367.00</td><td class=GridDataRight_Alt>-288.00</td></tr><tr><td class=GridDataLeft_Alt>1974-75 </td><td class=GridDataRight>2302.00</td><td class=GridDataRight_Alt>865.00</td><td class=GridDataRight>1301.00</td><td class=GridDataRight_Alt>640.00</td><td class=GridDataRight>-765.00</td><td class=GridDataRight_Alt>-1766.00</td><td class=GridDataRight>720.00</td><td class=GridDataRight_Alt>528.00</td></tr><tr><td class=GridDataLeft_Alt>1973-74 </td><td class=GridDataRight>1733.00</td><td class=GridDataRight_Alt>772.00</td><td class=GridDataRight>851.00</td><td class=GridDataRight_Alt>626.00</td><td class=GridDataRight>-237.00</td><td class=GridDataRight_Alt>-1119.00</td><td class=GridDataRight>328.00</td><td class=GridDataRight_Alt>630.00</td></tr><tr><td class=GridDataLeft_Alt>1972-73 </td><td class=GridDataRight>2179.00</td><td class=GridDataRight_Alt>990.00</td><td class=GridDataRight>1403.00</td><td class=GridDataRight_Alt>927.00</td><td class=GridDataRight>15.00</td><td class=GridDataRight_Alt>-761.00</td><td class=GridDataRight>870.00</td><td class=GridDataRight_Alt>1211.00</td></tr><tr><td class=GridDataLeft_Alt>1971-72 </td><td class=GridDataRight>1727.00</td><td class=GridDataRight_Alt>1217.00</td><td class=GridDataRight>1057.00</td><td class=GridDataRight_Alt>1146.00</td><td class=GridDataRight>100.00</td><td class=GridDataRight_Alt>-570.00</td><td class=GridDataRight>519.00</td><td class=GridDataRight_Alt>583.00</td></tr><tr><td class=GridDataLeft_Alt>1970-71 </td><td class=GridDataRight>1408.00</td><td class=GridDataRight_Alt>780.00</td><td class=GridDataRight>803.00</td><td class=GridDataRight_Alt>749.00</td><td class=GridDataRight>-163.00</td><td class=GridDataRight_Alt>-769.00</td><td class=GridDataRight>285.00</td><td class=GridDataRight_Alt>223.00</td></tr><tr><td style='display:none' align='left' colspan='9'>Source : Ace Knowledge Portal</td></tr></table></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
